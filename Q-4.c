@@ -29,7 +29,7 @@ The sum of column 2: 11
 
 */
 
-main()
+void main()
 {
 	int i,j;
 	int row,column,large;
@@ -50,7 +50,27 @@ main()
 	}
 	
 	int x,y;
-	int add=0;
+	int add=0,sum=0;
+	
+		printf("\n enter row number:");
+	scanf("%d",&x);
+	
+	printf("\n elements of row:");
+	
+   	for(i=0;i<row;i++){
+   		for(j=0; j<column; j++){
+   			if(i==x){
+   				printf("%d ",a[x][j]);
+	        	sum+=a[x][j];
+			   }
+		   }
+   		
+			
+		}
+		
+	printf("\nthe sum of a row is:%d",sum);
+	
+	
 	
 	printf("\n enter column number:");
 	scanf("%d",&y);
@@ -58,29 +78,21 @@ main()
 	printf("\n elements of column:");
 	
    	for(i=0;i<row;i++){
-   		
-		printf("%d ",a[i][y]);
+   	    for(j=0; j<column; j++){
+   	    	if(j==y){
+   	    			printf("%d ",a[i][y]);
 		add+=a[i][y];
+			   }
+		   }	
+	
 		
 		}
-	printf("\n the sum of a column is:%d",add);
+	printf("\nthe sum of a column is:%d",add);
 
 
-	int sum=0;
 	
-	printf("\nenter row number:");
-	scanf("%d",&x);
 	
-	printf("\nelements of row:");
-	
-   	for(j=0;j<column;j++){
-   		
-		printf("%d ",a[x][j]);
-		sum+=a[x][j];
-			
-		}
-		
-	printf("\nthe sum of a row is:%d",sum);
+
 }
 
 

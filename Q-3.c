@@ -1,73 +1,71 @@
 #include<stdio.h>
 
-/*
-Q.2 Write a Program to find the largest element from a given 2D array.
-For example,
-Input:
-Enter the array's row size: 3
-Enter the array's column size: 3
+ 
 
-Enter array's elements:
-Enter array's elements:
-a[0][0] = 2
-a[0][1] = 7
-a[0][2] = 1
-a[1][0] = 3
-a[1][1] = 5
-a[1][2] = 4
-a[2][0] = 8
-a[2][1] = 9
-a[2][2] = 6
+void main()
 
-Output:/
-Output:
-The largest element is: 9
+{
 
-*/
+     int a[10][10], b[10][10], r, c, i, j;
 
-void main(){
-	int i,j,row,column;
-	int a[row][column], c[row][column];
+      
 
+   	printf("enter the row size:");
+	scanf("%d",&r);
 	
-	printf("Enter Arrays row :");
-	scanf("%d",&row);
-	
-	printf("Enter Arrays column :");
-	scanf("%d",&column);
-	
-	
-	printf("Enter arrys Eliment: \n");
-		
-		
-		
-	for(i=0; i<row; i++){
-		for(j=0;j<column;j++){
-		
-		printf(" a[%d][%d]: ",i,j);
-		scanf("%d",&a[i][j]);
-		
+	printf("enter the column size:");
+	scanf("%d",&c);
+
+     printf("\nEnter elements of 2-D array:\n");
+
+     for(i=0; i<r; i++)
+
+     {
+
+              for(j=0; j<c; j++)
+
+              {
+
+                    	printf("Enter a[%d][%d]:",i,j);
+		             	scanf("%d",&a[i][j]);
+              }
+
+     }
+      
+    
+     for(i=0; i<r; i++)
+
+     {
+              for(j=0; j<c; j++)
+
+              {
+
+                       b[j][i] = a[i][j];
+
+              }
+     }
+
+      
+
+     printf(" Transposing Array:\n\n");
+
+     for(i=0; i<r; i++)
+
+     {
+
+              for(j=0; j<c; j++)
+
+              {
+
+                       printf("\t%d", b[i][j]);
+
+              }
+
+              printf("\n");
+
+     }
+
+   
+
 }
-	}
-	
-		printf(" largest is %d :\n");
 
-	for(i=0; i<row;i++){
-		for(j=0;j<column;j++){
-		printf("%d ",c[i][j]);
-	}
-	printf("\n");
-	}
-	
-
-	
-	
-
-	
-	   
-	
-	
-	
-	
-	
-}
